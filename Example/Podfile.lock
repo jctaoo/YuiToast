@@ -1,15 +1,22 @@
 PODS:
-  - YuiToast (0.1.0)
+  - SnapKit (5.0.0)
+  - YuiToast (0.1.0):
+    - SnapKit (= 5.0.0)
 
 DEPENDENCIES:
   - YuiToast (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - SnapKit
 
 EXTERNAL SOURCES:
   YuiToast:
     :path: "../"
 
 SPEC CHECKSUMS:
-  YuiToast: 18f4950f36fb7a5d209bbb5b90cabb8cbec2867b
+  SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
+  YuiToast: 3fe7bd60b5fdab429b31e8ed32a69bccdef2f7af
 
 PODFILE CHECKSUM: 5d611db4ae64e38fe1d3d3a56957dca1bd73462f
 

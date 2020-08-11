@@ -22,4 +22,5 @@ DESC
   spec.source       = { :git => "https://github.com/jctaoo/YuiToast.git", :tag => spec.version }
   spec.source_files  = "Sources/**/*"
   spec.frameworks = 'UIKit'
+  spec.dependency 'SnapKit', '5.0.0'
 end
