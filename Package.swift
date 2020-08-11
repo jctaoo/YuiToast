@@ -14,12 +14,12 @@ let package = Package(
             targets: ["YuiToast"]),
     ],
     dependencies: [
-      
+      .package(url: "https://github.com/SnapKit/SnapKit", .exact("5.0.0"))
     ],
     targets: [
         .target(
             name: "YuiToast",
-            dependencies: [],
+            dependencies: ["SnapKit"],
             path: "Sources")
     ],
     swiftLanguageVersions: [
