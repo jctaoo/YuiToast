@@ -1,0 +1,16 @@
+PODS:
+  - YuiToast (0.1.0)
+
+DEPENDENCIES:
+  - YuiToast (from `../`)
+
+EXTERNAL SOURCES:
+  YuiToast:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  YuiToast: 18f4950f36fb7a5d209bbb5b90cabb8cbec2867b
+
+PODFILE CHECKSUM: 5d611db4ae64e38fe1d3d3a56957dca1bd73462f
+
+COCOAPODS: 1.9.3
