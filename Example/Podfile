@@ -8,5 +8,6 @@ target 'Example' do
   # Pods for Example
 
   pod 'YuiToast', :path => '../'
-
+  pod 'Reveal-SDK', "~> 24", :configurations => ['Debug']
+  
 end

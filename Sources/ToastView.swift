@@ -20,10 +20,8 @@ open class ToastView: UIView {
       titleLabel.text = item.title
       if item.image != oldValue.image {
         imageView.snp.updateConstraints { make in
-          imageView.snp.makeConstraints { make in
-            make.trailing.equalTo(self.titleLabel.snp.leading).offset(self.item.image == nil ? 0 : -5)
-            make.width.height.equalTo(self.item.image == nil ? 0 : 20)
-          }
+          make.trailing.equalTo(self.titleLabel.snp.leading).offset(self.item.image == nil ? 0 : -5)
+          make.width.height.equalTo(self.item.image == nil ? 0 : 20)
         }
       }
     }
