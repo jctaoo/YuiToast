@@ -45,6 +45,22 @@ Then, run the following command:
 pod install
 ```
 
+### Accio (Also SwiftPM)
+[Accio](https://github.com/JamitLabs/Accio) is a decentralized dependency manager driven by SwiftPM that works for iOS/tvOS/watchOS/macOS projects.
+You can install Accio with [Homebrew](http://brew.sh/) using the following command: (If you use SwiftPM, it's not necessary)
+```shell
+brew tap JamitLabs/Accio https://github.com/JamitLabs/Accio.git
+brew install accio
+```
+To integrate YuiToast into your Xcode project using Accio or SwiftPM, specify the following in your Package.swift manifest:
+```swift
+.package(url: "https://github.com/jctaoo/YuiToast", .exact("0.1.0"))
+```
+If you use Accio, run:
+```shell
+accio install
+```
+
 ## Usage
 
 ### Show text toast:
@@ -86,4 +102,5 @@ Toast.default.update(item: item) { item in
 
 ## License
 Copyright (c) 2020 Tao Juncheng
+
 [LICENSE](/LICENSE) file
