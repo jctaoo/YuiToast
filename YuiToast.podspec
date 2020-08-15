@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "YuiToast"
-  spec.version      = "0.1.0"
+  spec.version      = "0.1.1"
   spec.summary      = "A lightweight toast library for iOS."
   spec.platform     = :ios
   spec.ios.deployment_target = '11.0'
