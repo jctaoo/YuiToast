@@ -34,6 +34,15 @@ final public class Toast: NSObject {
     toastViews.enumerated().filter({ $0.element.item.identity == item.identity }).first
   }
   
+  final public func config(textColor: UIColor? = nil, backgroundColor: UIColor? = nil) {
+    if let tc = textColor {
+      ToastView.Configuration.textColor = tc
+    }
+    if let bc = backgroundColor {
+      ToastView.Configuration.backgroundColor = bc
+    }
+  }
+  
   final public func update(item toastItem: ToastItem, updateClouser: ((ToastItem) -> ()) = { _ in }) {
     updateClouser(toastItem)
     if let view = getView(by: toastItem)?.1 {

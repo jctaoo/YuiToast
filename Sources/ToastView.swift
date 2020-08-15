@@ -12,6 +12,25 @@ import SnapKit
 @objc(YuiToastView)
 open class ToastView: UIView {
   
+  @objc(YuiToastViewConfiguration)
+  final internal class Configuration: NSObject {
+    static var backgroundColor: UIColor = {
+      if #available(iOS 13.0, *) {
+        return .systemBackground
+      } else {
+        return #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+      }
+    }()
+    
+    static var textColor: UIColor = {
+      if #available(iOS 13.0, *) {
+        return .secondaryLabel
+      } else {
+        return #colorLiteral(red: 0.9215686275, green: 0.9215686275, blue: 0.9607843137, alpha: 0.6)
+      }
+    }()
+  }
+  
   // MARK: - Properties
   
   open var item: ToastItem = .empty {
@@ -52,11 +71,7 @@ open class ToastView: UIView {
   /// And default font is bold footnote.
   open lazy var titleLabel: UILabel = {
     let label = UILabel()
-    if #available(iOS 13.0, *) {
-      label.textColor = .secondaryLabel
-    } else {
-      label.textColor = #colorLiteral(red: 0.9215686275, green: 0.9215686275, blue: 0.9607843137, alpha: 0.6)
-    }
+    label.textColor = Configuration.textColor
     label.font = UIFont.preferredFont(forTextStyle: .footnote).withWeight(.bold)
     label.translatesAutoresizingMaskIntoConstraints = false
     return label
@@ -97,11 +112,7 @@ open class ToastView: UIView {
   
   open func commonInit() {
     addGestureRecognizer(self.tapGesture)
-    if #available(iOS 13.0, *) {
-      backgroundColor = .systemBackground
-    } else {
-      backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-    }
+    backgroundColor = Configuration.backgroundColor
     cornerRadius = 8
     sketchShadow(color: UIColor.black.withAlphaComponent(0.5), x: 0, y: 2, blur: 4, spread: 0)
     addSubview(contentView)
