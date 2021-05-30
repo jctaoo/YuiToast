@@ -1,0 +1,27 @@
+PODS:
+  - Reveal-SDK (24)
+  - SnapKit (5.0.0)
+  - YuiToast (0.1.0):
+    - SnapKit (= 5.0.0)
+
+DEPENDENCIES:
+  - Reveal-SDK (~> 24)
+  - YuiToast (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Reveal-SDK
+    - SnapKit
+
+EXTERNAL SOURCES:
+  YuiToast:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Reveal-SDK: 5d7e56b8f018c0a88b3a2c10bf68d598bbd3b071
+  SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
+  YuiToast: 3fe7bd60b5fdab429b31e8ed32a69bccdef2f7af
+
+PODFILE CHECKSUM: cc009978f951bb04d693bd8ca14e2cd5e26bf1a1
+
+COCOAPODS: 1.9.3
